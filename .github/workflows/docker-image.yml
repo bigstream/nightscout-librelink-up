@@ -28,7 +28,7 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64,linux/arm/v7
-          tags: timoschlueter/nightscout-librelink-up:dev
+          tags: grossbaa/nightscout-librelink-up:dev
       -
         name: Docker Build and Push (Tagged)
         if: startsWith(github.ref, 'refs/tags/')
@@ -37,7 +37,7 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64,linux/arm/v7
-          tags: timoschlueter/nightscout-librelink-up:${{github.ref_name}},timoschlueter/nightscout-librelink-up:latest
+          tags: grossbaa/nightscout-librelink-up:${{github.ref_name}},grossbaa/nightscout-librelink-up:latest
       -
         name: Docker Image digest
         if: startsWith(github.ref, 'refs/tags/')
